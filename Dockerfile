@@ -1,6 +1,5 @@
 FROM anapsix/alpine-java
-COPY bnkit.jar bnkit.jar
-COPY grasp grasp
-RUN ["chmod", "+x", "grasp"]
-ENTRYPOINT ./grasp
-CMD ["-h"]
+COPY bnkit.jar /home/user/bnkit.jar
+COPY grasp /usr/local/bin
+RUN ["chmod", "+x", "/usr/local/bin/grasp"]
+RUN mkdir /data
